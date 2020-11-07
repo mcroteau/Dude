@@ -1,7 +1,7 @@
-package xyz.yougo.web;
+package dev.yougo.web;
 
-import xyz.yougo.Dude;
-import xyz.yougo.DudeFactory;
+import dev.yougo.Dude;
+import dev.yougo.DudeFactory;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;

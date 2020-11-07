@@ -1,8 +1,8 @@
-package xyz.yougo;
+package dev.yougo;
 
-import xyz.yougo.access.MockAccessor;
-import xyz.yougo.filters.DudeFilter;
-import xyz.yougo.utils.TestConstants;
+import dev.yougo.access.MockAccessor;
+import dev.yougo.filters.DudeFilter;
+import dev.yougo.utils.TestConstants;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.Test;

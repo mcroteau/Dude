@@ -1,4 +1,4 @@
-package xyz.yougo.utils;
+package dev.yougo.utils;
 
 public class AuthdIncrementor {
     private int count;

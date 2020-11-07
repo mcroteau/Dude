@@ -1,8 +1,8 @@
-package xyz.yougo;
+package dev.yougo;
 
-import xyz.yougo.Dude;
-import xyz.yougo.access.Accessor;
-import xyz.yougo.access.impl.MockAccessor;
+import dev.yougo.Dude;
+import dev.yougo.access.Accessor;
+import dev.yougo.access.impl.MockAccessor;
 
 public class DudeFactory {
 

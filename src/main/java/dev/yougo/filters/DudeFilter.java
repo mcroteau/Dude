@@ -1,7 +1,7 @@
-package xyz.yougo.filters;
+package dev.yougo.filters;
 
-import xyz.yougo.Dude;
-import xyz.yougo.Storage;
+import dev.yougo.Dude;
+import dev.yougo.Storage;
 
 import javax.servlet.*;
 import javax.servlet.http.Cookie;

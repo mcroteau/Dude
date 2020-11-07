@@ -1,4 +1,4 @@
-package xyz.yougo;
+package dev.yougo;
 
 import java.io.IOException;
 
@@ -6,25 +6,24 @@ import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
 import javax.servlet.ServletException;
 
-import org.easymock.EasyMockSupport;
 import org.junit.jupiter.api.Test;
 import org.apache.log4j.Logger;
 import org.apache.log4j.BasicConfigurator;
 import org.mockito.Mockito;
 import org.springframework.mock.web.MockHttpServletRequest;
 
-import xyz.yougo.access.MockAccessor;
-import xyz.yougo.filters.DudeFilter;
+import dev.yougo.access.MockAccessor;
+import dev.yougo.filters.DudeFilter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import xyz.yougo.utils.AuthdIncrementor;
-import xyz.yougo.utils.TestConstants;
+import dev.yougo.utils.AuthdIncrementor;
+import dev.yougo.utils.TestConstants;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class StorageFilterTest extends EasyMockSupport {
+public class StorageFilterTest {
 
     private static Logger log = Logger.getLogger(StorageFilterTest.class);
 

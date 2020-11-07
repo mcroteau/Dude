@@ -1,6 +1,6 @@
-package xyz.yougo.access;
+package dev.yougo.access;
 
-import xyz.yougo.Dude;
+import dev.yougo.Dude;
 
 import java.util.HashSet;
 import java.util.Set;

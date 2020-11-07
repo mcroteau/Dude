@@ -1,4 +1,4 @@
-package xyz.yougo;
+package dev.yougo;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

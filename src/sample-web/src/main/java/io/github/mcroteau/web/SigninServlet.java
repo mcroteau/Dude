@@ -1,4 +1,4 @@
-package xyz.yougo.web;
+package dev.yougo.web;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

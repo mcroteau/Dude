@@ -1,4 +1,4 @@
-package xyz.yougo.access;
+package dev.yougo.access;
 
 import java.util.Set;
 

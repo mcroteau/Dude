@@ -1,6 +1,6 @@
-package xyz.yougo;
+package dev.yougo;
 
-import xyz.yougo.access.Accessor;
+import dev.yougo.access.Accessor;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.Cookie;

@@ -6,7 +6,7 @@ Add dependency:
 
 ```
 <dependency>
-    <groupId>xyz.yougo</groupId>
+    <groupId>dev.yougo</groupId>
     <artifactId>dude</artifactId>
     <version>0.1</version>
 </dependency>
@@ -17,7 +17,7 @@ Update `web.xml`, add DudeFilter declaration:
 ```
 <filter>
     <filter-name>Dude</filter-name>
-    <filter-class>xyz.yougo.filters.DudeFilter</filter-class>
+    <filter-class>dev.yougo.filters.DudeFilter</filter-class>
 </filter>
 
 <filter-mapping>
@@ -34,7 +34,7 @@ Spring Example:
 ```
 package xyz.ioc.accessor;
 
-import xyz.yougo.access.Accessor;
+import dev.yougo.access.Accessor;
 import org.springframework.beans.factory.annotation.Autowired;
 import xyz.ioc.dao.AccountDao;
 import xyz.ioc.model.Account;
@@ -85,7 +85,7 @@ or if spring project define your beans as such:
 ```
 <bean id="jdbcAccessor" class="com.project.accessor.JdbcAccessor"/>
 
-<bean id="dude" class="xyz.yougo.Dude" scope="singleton">
+<bean id="dude" class="dev.yougo.Dude" scope="singleton">
     <constructor-arg name="accessor" ref="jdbcAccessor"/>
 </bean>
 ```

@@ -1,6 +1,6 @@
-package xyz.yougo.tags;
+package dev.yougo.tags;
 
-import xyz.yougo.Dude;
+import dev.yougo.Dude;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;

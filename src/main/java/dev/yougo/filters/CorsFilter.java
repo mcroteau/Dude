@@ -1,4 +1,4 @@
-package xyz.yougo.filters;
+package dev.yougo.filters;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
