@@ -7,12 +7,12 @@
 
 	<name>Dude</name>
 	<description>Dude is a small security J2ee plugin.</description>
-	<url>https://mcroteau.github.io/Parakeet/</url>
+	<url>https://mcroteau.github.io/Dude/</url>
 
 	<licenses>
 		<license>
 			<name>MIT License</name>
-			<url>https://github.com/mcroteau/Parakeet/blob/master/License.md</url>
+			<url>https://github.com/mcroteau/Dude/blob/master/License.md</url>
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
@@ -204,9 +204,9 @@
 
 
 	<scm>
-		<connection>scm:git:git://github.com/mcroteau/Parakeet.git</connection>
-		<developerConnection>scm:git:git@github.com:mcroteau/Parakeet.git</developerConnection>
-		<url>https://github.com/mcroteau/Parakeet</url>
+		<connection>scm:git:git://github.com/mcroteau/Dude.git</connection>
+		<developerConnection>scm:git:git@github.com:mcroteau/Dude.git</developerConnection>
+		<url>https://github.com/mcroteau/Dude</url>
 		<tag>HEAD</tag>
 	</scm>
 

@@ -1,20 +1,20 @@
 package xyz.sheswayhot;
 
-import xyz.sheswayhot.Parakeet;
+import xyz.sheswayhot.Dude;
 import xyz.sheswayhot.access.Accessor;
 import xyz.sheswayhot.access.impl.MockAccessor;
 
-public class ParakeetFactory {
+public class DudeFactory {
 
-    Parakeet parakeet;
+    Dude parakeet;
     Accessor mockAccessor;
 
-    public ParakeetFactory(){
+    public DudeFactory(){
         mockAccessor = new MockAccessor();
-        parakeet = new Parakeet(mockAccessor);
+        parakeet = new Dude(mockAccessor);
     }
 
-    public Parakeet getParakeet(){
+    public Dude getDude(){
         return this.parakeet;
     }
 

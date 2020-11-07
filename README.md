@@ -31,7 +31,7 @@ Update `web.xml`, add DudeFilter declaration:
 ```
 
 Create an Accessor, the class
-that provides data to Parakeet.
+that provides data to Dude.
 
 Example:
 

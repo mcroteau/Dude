@@ -27,7 +27,7 @@ Update `web.xml`, add DudeFilter declaration:
 ```
 
 Create an Accessor, the class
-that provides data to Parakeet.
+that provides data to Dude.
 
 Spring Example:
 
@@ -78,7 +78,7 @@ doesn't pick up the cookie on authentication. Add to the **web.xml**
 
 Finally wire it up either by:
 
-`Parakeet dude = new Parakeet(new JdcbAccessor());`
+`Dude dude = new Dude(new JdcbAccessor());`
 
 or if spring project define your beans as such:
 

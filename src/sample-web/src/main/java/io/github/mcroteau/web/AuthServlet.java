@@ -1,7 +1,7 @@
 package xyz.sheswayhot.web;
 
-import xyz.sheswayhot.Parakeet;
-import xyz.sheswayhot.ParakeetFactory;
+import xyz.sheswayhot.Dude;
+import xyz.sheswayhot.DudeFactory;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
@@ -13,19 +13,19 @@ import java.io.IOException;
 
 public class AuthServlet extends HttpServlet {
 
-    Parakeet parakeet;
-    ParakeetFactory parakeetFactory;
+    Dude parakeet;
+    DudeFactory parakeetFactory;
 
     @Override
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
         ServletContext context = config.getServletContext();
-        ParakeetFactory parakeetFactory = (ParakeetFactory) context.getAttribute("parakeetFactory");
+        DudeFactory parakeetFactory = (DudeFactory) context.getAttribute("parakeetFactory");
         if(parakeetFactory == null) {
-            parakeetFactory = new ParakeetFactory();
+            parakeetFactory = new DudeFactory();
             context.setAttribute("parakeetFactory", parakeetFactory);
         }
-        parakeet = parakeetFactory.getParakeet();
+        parakeet = parakeetFactory.getDude();
     }
 
     @Override
