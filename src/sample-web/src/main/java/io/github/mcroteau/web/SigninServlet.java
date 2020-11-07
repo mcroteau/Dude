@@ -1,4 +1,4 @@
-package xyz.sheswayhot.web;
+package xyz.yougo.web;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

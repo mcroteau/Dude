@@ -1,4 +1,4 @@
-package xyz.sheswayhot;
+package xyz.yougo;
 
 import java.io.IOException;
 
@@ -13,14 +13,14 @@ import org.apache.log4j.BasicConfigurator;
 import org.mockito.Mockito;
 import org.springframework.mock.web.MockHttpServletRequest;
 
-import xyz.sheswayhot.access.MockAccessor;
-import xyz.sheswayhot.filters.DudeFilter;
+import xyz.yougo.access.MockAccessor;
+import xyz.yougo.filters.DudeFilter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import xyz.sheswayhot.utils.AuthdIncrementor;
-import xyz.sheswayhot.utils.TestConstants;
+import xyz.yougo.utils.AuthdIncrementor;
+import xyz.yougo.utils.TestConstants;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 

@@ -1,8 +1,8 @@
-package xyz.sheswayhot;
+package xyz.yougo;
 
-import xyz.sheswayhot.access.MockAccessor;
-import xyz.sheswayhot.filters.DudeFilter;
-import xyz.sheswayhot.utils.TestConstants;
+import xyz.yougo.access.MockAccessor;
+import xyz.yougo.filters.DudeFilter;
+import xyz.yougo.utils.TestConstants;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.Test;

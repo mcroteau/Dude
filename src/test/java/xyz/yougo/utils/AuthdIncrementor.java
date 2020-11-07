@@ -1,4 +1,4 @@
-package xyz.sheswayhot.utils;
+package xyz.yougo.utils;
 
 public class AuthdIncrementor {
     private int count;

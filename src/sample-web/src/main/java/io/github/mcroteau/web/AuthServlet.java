@@ -1,7 +1,7 @@
-package xyz.sheswayhot.web;
+package xyz.yougo.web;
 
-import xyz.sheswayhot.Dude;
-import xyz.sheswayhot.DudeFactory;
+import xyz.yougo.Dude;
+import xyz.yougo.DudeFactory;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;

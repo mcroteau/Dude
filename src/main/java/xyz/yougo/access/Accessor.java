@@ -1,4 +1,4 @@
-package xyz.sheswayhot.access;
+package xyz.yougo.access;
 
 import java.util.Set;
 

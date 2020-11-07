@@ -1,6 +1,6 @@
 #  Dude
 
-## A Simple J2ee security framework
+## A Simple J2ee security plugin
 
 Dude is a small Open Source security plugin that allows for quick securing of J2ee applications.
 
@@ -10,7 +10,7 @@ Add dependency:
 
 ```
 <dependency>
-    <groupId>xyz.sheswayhot</groupId>
+    <groupId>xyz.yougo</groupId>
     <artifactId>dude</artifactId>
     <version>0.1</version>
 </dependency>
@@ -21,7 +21,7 @@ Update `web.xml`, add DudeFilter declaration:
 ```
 <filter>
     <filter-name>Dude</filter-name>
-    <filter-class>xyz.sheswayhot.filters.DudeFilter</filter-class>
+    <filter-class>xyz.yougo.filters.DudeFilter</filter-class>
 </filter>
 
 <filter-mapping>
@@ -38,7 +38,7 @@ Spring Example:
 ```
 package xyz.ioc.accessor;
 
-import xyz.sheswayhot.access.Accessor;
+import xyz.yougo.access.Accessor;
 import org.springframework.beans.factory.annotation.Autowired;
 import xyz.ioc.dao.AccountDao;
 import xyz.ioc.model.Account;
@@ -89,7 +89,7 @@ or if spring project define your beans as such:
 ```
 <bean id="jdbcAccessor" class="com.project.accessor.JdbcAccessor"/>
 
-<bean id="dude" class="xyz.sheswayhot.Dude" scope="singleton">
+<bean id="dude" class="xyz.yougo.Dude" scope="singleton">
     <constructor-arg name="accessor" ref="jdbcAccessor"/>
 </bean>
 ```
