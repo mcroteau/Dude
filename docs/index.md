@@ -1,4 +1,4 @@
-# Dude is a small Open Source security plugin that allows for quick securing of J2ee applications.
+# Dude! is a small Open Source security plugin that allows for quick securing of J2ee applications.
 
 ### Installation
 
@@ -129,6 +129,11 @@ Displays when user is anonymous & not authenticated
 Displays content only when user is authenticated
 
 `<dude:isAuthenticated></isAuthenticated>`
+
+
+Displays current authenticated user
+
+`<dude:username/>`
 
 
 Sample web app can be viewed within the project under `src/sample-web`

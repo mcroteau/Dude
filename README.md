@@ -1,10 +1,10 @@
-#  Dude 
+#  Dude!
 
 ## A Simple J2ee security framework
 
-Dude is a small Open Source security plugin that allows for quick security.
+# Dude! is a small Open Source security plugin that allows for quick securing of J2ee applications.
 
-#### Installation
+### Installation
 
 Add dependency:
 
@@ -33,7 +33,7 @@ Update `web.xml`, add DudeFilter declaration:
 Create an Accessor, the class
 that provides data to Dude.
 
-Example:
+Spring Example:
 
 ```
 package xyz.ioc.accessor;
@@ -79,37 +79,40 @@ doesn't pick up the cookie on authentication. Add to the **web.xml**
 	</session-config>
 ```
 
-Finally wire it up either by two ways either via Spring or 
-set the accessor...
+
+Finally wire it up either by:
+
+`Dude dude = new Dude(new JdcbAccessor());`
+
+or if spring project define your beans as such:
 
 ```
-<bean id="accessor" class="com.project.accessor.JdbcAccessor"/>
+<bean id="jdbcAccessor" class="com.project.accessor.JdbcAccessor"/>
+
+<bean id="dude" class="xyz.sheswayhot.Dude" scope="singleton">
+    <constructor-arg name="accessor" ref="jdbcAccessor"/>
+</bean>
 ```
-
-Then somewhere in your startup routine set:
-
-```Dude.setAccessor(accessor)```
-
 
 ### Your project is configured. 
 
 Now you can use can authenticate your user via :
 
-`Dude.login()`
+`dude.login()`
 
 And you'll have access to the following methods:
 
-`Dude.isAuthenticated()`
+`dude.isAuthenticated()`
 
-`Dude.hasRole(role)`
+`dude.hasRole(role)`
 
-`Dude.hasPermission(permission)`
+`dude.hasPermission(permission)`
 
-To log out:
+To sign out:
 
-`Dude.logout()`
+`dude.logout()`
 
-### See, we told you it was simple!
+### See, we told you it was cute!
 
 Oh, we added something new. Taglibs:
 
@@ -124,15 +127,14 @@ within jsp without scriptlets.
 
 Displays when user is anonymous & not authenticated
 
-`<dude:anonymous></anonymous>`
+`<dude:isAnonymous></isAnonymous>`
 
 
 Displays content only when user is authenticated
 
 `<dude:isAuthenticated></isAuthenticated>`
 
-
-Displays username
+Displays current authenticated user
 
 `<dude:username/>`
 
@@ -140,4 +142,3 @@ Displays username
 Sample web app can be viewed within the project under `src/sample-web`
 
 If you want a more, we recommend Apache Shiro! It's a Bull Dog Man.
-
