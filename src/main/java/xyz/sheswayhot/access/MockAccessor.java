@@ -1,7 +1,6 @@
-package xyz.sheswayhot.resources.access.impl;
+package xyz.sheswayhot.access;
 
-import xyz.sheswayhot.resources.Constants;
-import xyz.sheswayhot.resources.access.Accessor;
+import xyz.sheswayhot.Dude;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -18,7 +17,7 @@ public class MockAccessor implements Accessor {
 
     @Override
     public String getPassword(String user) {
-        return Constants.hash(MOCK_PASS);
+        return Dude.hash(MOCK_PASS);
     }
 
     @Override

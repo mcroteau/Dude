@@ -1,7 +1,6 @@
 package xyz.sheswayhot;
 
-import xyz.sheswayhot.resources.Storage;
-import xyz.sheswayhot.resources.access.Accessor;
+import xyz.sheswayhot.access.Accessor;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.Cookie;
@@ -16,7 +15,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class Dude {
 
-    public static final String COOKIE = "DUDE.SESSION";
+    public static final String COOKIE = "Dude.Session";
 
     static final String ALGORITHM = "SHA-256";
 
@@ -27,17 +26,6 @@ public class Dude {
     static Accessor accessor;
     static Map<String, HttpSession> sessions = new ConcurrentHashMap<String, HttpSession>();
 
-    public static String get(String key){
-        HttpServletRequest req = Storage.getRequest();
-        HttpSession session = req.getSession();
-
-        if(session != null &&
-            session.getAttribute(key) != null){
-            return (String) session.getAttribute(key);
-        }
-        return "";
-    }
-
 
     public static String getUser(){
         HttpServletRequest req = Storage.getRequest();
@@ -45,6 +33,18 @@ public class Dude {
 
         if(session != null){
             return (String) session.getAttribute(USER_KEY);
+        }
+        return "";
+    }
+
+
+    public static String get(String key){
+        HttpServletRequest req = Storage.getRequest();
+        HttpSession session = req.getSession();
+
+        if(session != null &&
+            session.getAttribute(key) != null){
+            return (String) session.getAttribute(key);
         }
         return "";
     }

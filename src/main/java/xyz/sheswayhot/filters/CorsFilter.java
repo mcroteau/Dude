@@ -1,4 +1,4 @@
-package xyz.sheswayhot.resources.filters;
+package xyz.sheswayhot.filters;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;

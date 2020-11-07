@@ -1,7 +1,7 @@
-package xyz.sheswayhot.resources.filters;
+package xyz.sheswayhot.filters;
 
 import xyz.sheswayhot.Dude;
-import xyz.sheswayhot.resources.Storage;
+import xyz.sheswayhot.Storage;
 
 import javax.servlet.*;
 import javax.servlet.http.Cookie;
@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-public class CacheFilter implements Filter {
+public class DudeFilter implements Filter {
 
     @Override
     public void init(FilterConfig config) throws ServletException { }

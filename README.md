@@ -16,12 +16,12 @@ Add dependency:
 </dependency>
 ```
 
-Update `web.xml`, add CacheFilter declaration:
+Update `web.xml`, add DudeFilter declaration:
 
 ```
 <filter>
     <filter-name>Dude</filter-name>
-    <filter-class>xyz.sheswayhot.resources.filters.DudeFilter</filter-class>
+    <filter-class>xyz.sheswayhot.filters.DudeFilter</filter-class>
 </filter>
 
 <filter-mapping>
@@ -38,7 +38,7 @@ Example:
 ```
 package xyz.ioc.accessor;
 
-import xyz.sheswayhot.resources.access.Accessor;
+import xyz.sheswayhot.access.Accessor;
 import org.springframework.beans.factory.annotation.Autowired;
 import xyz.ioc.dao.AccountDao;
 import xyz.ioc.model.Account;

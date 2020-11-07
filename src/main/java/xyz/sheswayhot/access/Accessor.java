@@ -1,4 +1,4 @@
-package xyz.sheswayhot.resources.access;
+package xyz.sheswayhot.access;
 
 import java.util.Set;
 

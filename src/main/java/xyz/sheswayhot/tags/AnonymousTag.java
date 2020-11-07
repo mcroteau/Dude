@@ -1,4 +1,4 @@
-package xyz.sheswayhot.resources.tags;
+package xyz.sheswayhot.tags;
 
 import xyz.sheswayhot.Dude;
 
@@ -8,7 +8,7 @@ import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.JspWriter;
 import javax.servlet.jsp.tagext.TagSupport;
 
-public class UsernameTag extends TagSupport {
+public class AnonymousTag extends TagSupport {
 
     @Override
     public int doStartTag() throws JspException {
@@ -21,17 +21,19 @@ public class UsernameTag extends TagSupport {
             HttpSession session = req.getSession(false);
 
             if(session != null) {
-
                 if(Dude.isAuthenticated()){
-                    out.println(Dude.get(Dude.USER_KEY));
+                    return TagSupport.SKIP_BODY;
+                }else{
+                    return TagSupport.EVAL_BODY_INCLUDE;
                 }
 
+            }else{
+                return TagSupport.EVAL_BODY_INCLUDE;
             }
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        return TagSupport.SKIP_BODY;
+        return TagSupport.EVAL_BODY_INCLUDE;
     }
 }

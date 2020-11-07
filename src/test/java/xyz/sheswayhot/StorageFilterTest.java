@@ -13,8 +13,8 @@ import org.apache.log4j.BasicConfigurator;
 import org.mockito.Mockito;
 import org.springframework.mock.web.MockHttpServletRequest;
 
-import xyz.sheswayhot.resources.access.impl.MockAccessor;
-import xyz.sheswayhot.resources.filters.CacheFilter;
+import xyz.sheswayhot.access.MockAccessor;
+import xyz.sheswayhot.filters.DudeFilter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -36,7 +36,7 @@ public class StorageFilterTest extends EasyMockSupport {
     public void stressTestFilter() throws ServletException, IOException, InterruptedException {
 
         AuthdIncrementor incrementer = new AuthdIncrementor();
-        CacheFilter filter = new CacheFilter();
+        DudeFilter filter = new DudeFilter();
         MockAccessor accessor = new MockAccessor();
         Dude.setAccessor(accessor);
 

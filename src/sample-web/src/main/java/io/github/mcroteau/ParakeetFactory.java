@@ -1,8 +1,8 @@
 package xyz.sheswayhot;
 
 import xyz.sheswayhot.Parakeet;
-import xyz.sheswayhot.resources.access.Accessor;
-import xyz.sheswayhot.resources.access.impl.MockAccessor;
+import xyz.sheswayhot.access.Accessor;
+import xyz.sheswayhot.access.impl.MockAccessor;
 
 public class ParakeetFactory {
 

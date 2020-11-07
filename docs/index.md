@@ -1,4 +1,4 @@
-# Parakeet is a small Open Source security plugin that allows for quick securing of J2ee applications.
+# Dude is a small Open Source security plugin that allows for quick securing of J2ee applications.
 
 ### Installation
 
@@ -12,16 +12,16 @@ Add dependency:
 </dependency>
 ```
 
-Update `web.xml`, add CacheFilter declaration:
+Update `web.xml`, add DudeFilter declaration:
 
 ```
 <filter>
-    <filter-name>Parakeet</filter-name>
-    <filter-class>xyz.sheswayhot.resources.filters.CacheFilter</filter-class>
+    <filter-name>Dude</filter-name>
+    <filter-class>xyz.sheswayhot.filters.DudeFilter</filter-class>
 </filter>
 
 <filter-mapping>
-    <filter-name>Parakeet</filter-name>
+    <filter-name>Dude</filter-name>
     <url-pattern>/*</url-pattern>
 </filter-mapping>
 ```
@@ -34,7 +34,7 @@ Spring Example:
 ```
 package xyz.ioc.accessor;
 
-import xyz.sheswayhot.resources.access.Accessor;
+import xyz.sheswayhot.access.Accessor;
 import org.springframework.beans.factory.annotation.Autowired;
 import xyz.ioc.dao.AccountDao;
 import xyz.ioc.model.Account;

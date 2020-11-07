@@ -8,29 +8,29 @@
 
     <jsp-version>1.2</jsp-version>
 
-    <short-name>Parakeet</short-name>
+    <short-name>Dude</short-name>
 
     <uri>/META-INF/tags/dude.tld</uri>
 
-    <description>Parakeet Tag Library</description>
+    <description>Dude Tag Library</description>
 
     <tag>
-        <name>anonymous</name>
-        <tag-class>xyz.sheswayhot.resources.tags.AnonymousTag</tag-class>
+        <name>isAnonymous</name>
+        <tag-class>xyz.sheswayhot.tags.AnonymousTag</tag-class>
         <body-content>JSP</body-content>
         <description></description>
     </tag>
 
     <tag>
         <name>isAuthenticated</name>
-        <tag-class>xyz.sheswayhot.resources.tags.AuthenticatedTag</tag-class>
+        <tag-class>xyz.sheswayhot.tags.AuthenticatedTag</tag-class>
         <body-content>JSP</body-content>
         <description></description>
     </tag>
 
     <tag>
         <name>username</name>
-        <tag-class>xyz.sheswayhot.resources.tags.UsernameTag</tag-class>
+        <tag-class>xyz.sheswayhot.tags.UsernameTag</tag-class>
         <body-content>empty</body-content>
         <description></description>
     </tag>

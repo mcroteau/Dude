@@ -1,7 +1,7 @@
 package xyz.sheswayhot;
 
-import xyz.sheswayhot.resources.access.impl.MockAccessor;
-import xyz.sheswayhot.resources.filters.CacheFilter;
+import xyz.sheswayhot.access.MockAccessor;
+import xyz.sheswayhot.filters.DudeFilter;
 import xyz.sheswayhot.utils.TestConstants;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
@@ -27,7 +27,7 @@ public class SessionUserTest {
     @Test
     public void testGetUser() throws InterruptedException{
 
-        CacheFilter filter = new CacheFilter();
+        DudeFilter filter = new DudeFilter();
         MockAccessor accessor =  new MockAccessor();
         Dude.setAccessor(accessor);
 
