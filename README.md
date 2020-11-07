@@ -30,8 +30,8 @@ Update `web.xml`, add DudeFilter declaration:
 </filter-mapping>
 ```
 
-Create an Accessor, the class
-that provides data to Dude.
+Create an data access, it will be the class
+that provides data to **Dude**.
 
 Spring Example:
 
@@ -74,43 +74,40 @@ Add cookie xml declaration just in case the container
 doesn't pick up the cookie on authentication. Add to the **web.xml**
 
 ```
-	<session-config>
-		<tracking-mode>COOKIE</tracking-mode>
-	</session-config>
+<session-config>
+    <tracking-mode>COOKIE</tracking-mode>
+</session-config>
 ```
 
 
-Finally wire it up either by:
-
-`Dude dude = new Dude(new JdcbAccessor());`
-
-or if spring project define your beans as such:
+Finaly wire it up:
 
 ```
 <bean id="jdbcAccessor" class="com.project.accessor.JdbcAccessor"/>
-
-<bean id="dude" class="dev.yougo.Dude" scope="singleton">
-    <constructor-arg name="accessor" ref="jdbcAccessor"/>
-</bean>
 ```
+
+and add the data access class to Dude on startup :
+
+```Dude.setAccessor(jdbcAccessor);```
+
 
 ### Your project is configured. 
 
 Now you can use can authenticate your user via :
 
-`dude.login()`
+`Dude.login()`
 
 And you'll have access to the following methods:
 
-`dude.isAuthenticated()`
+`Dude.isAuthenticated()`
 
-`dude.hasRole(role)`
+`Dude.hasRole(role)`
 
-`dude.hasPermission(permission)`
+`Dude.hasPermission(permission)`
 
 To sign out:
 
-`dude.logout()`
+`Dude.logout()`
 
 ### See, we told you it was simple!
 
@@ -134,6 +131,7 @@ Displays content only when user is authenticated
 
 `<dude:isAuthenticated></isAuthenticated>`
 
+
 Displays current authenticated user
 
 `<dude:username/>`
@@ -141,4 +139,4 @@ Displays current authenticated user
 
 Sample web app can be viewed within the project under `src/sample-web`
 
-If you want a more, we recommend Apache Shiro! It's a Bull Dog Man.
+If you want a more, we recommend Apache Shiro! It's a Bull Dog man.

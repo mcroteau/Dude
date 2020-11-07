@@ -15,7 +15,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class Dude {
 
-    public static final String COOKIE = "Dude.Session";
+    public static final String COOKIE = "JSESSIONID";
 
     static final String ALGORITHM = "SHA-256";
 
@@ -83,7 +83,6 @@ public class Dude {
     }
 
 
-
     public static boolean logout(){
         HttpServletRequest req = Storage.getRequest();
         HttpServletResponse resp = Storage.getResponse();
@@ -103,12 +102,15 @@ public class Dude {
         return true;
     }
 
+
     public static boolean isAuthenticated(){
         HttpServletRequest req = Storage.getRequest();
         if(req != null) {
             HttpSession session = req.getSession(false);
 
-            if (session != null && sessions.containsKey(session.getId())) {
+            if (session != null &&
+                    sessions.containsKey(session.getId()) &&
+                        containsCookie(req)) {
                 return true;
             }
         }
@@ -118,10 +120,10 @@ public class Dude {
 
     private static void expireCookie(HttpServletRequest req, HttpServletResponse resp){
         Cookie cookie = new Cookie(COOKIE, "");
+        cookie.setPath("/");
         cookie.setMaxAge(0);
         resp.addCookie(cookie);
     }
-
 
 
     public static boolean containsCookie(HttpServletRequest req){
