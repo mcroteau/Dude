@@ -1,8 +1,8 @@
-#  Dude!
+#  Dude
 
 ## A Simple J2ee security framework
 
-# Dude! is a small Open Source security plugin that allows for quick securing of J2ee applications.
+Dude is a small Open Source security plugin that allows for quick securing of J2ee applications.
 
 ### Installation
 
@@ -112,7 +112,7 @@ To sign out:
 
 `dude.logout()`
 
-### See, we told you it was cute!
+### See, we told you it was simple!
 
 Oh, we added something new. Taglibs:
 
