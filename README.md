@@ -1,8 +1,8 @@
-#  Parakeet 
+#  Dude 
 
-## A cute J2ee security framework
+## A Simple J2ee security framework
 
-Parakeet is a small Open Source security plugin that allows for quick securing of J2ee applications.
+Dude is a small Open Source security plugin that allows for quick security.
 
 #### Installation
 
@@ -20,12 +20,12 @@ Update `web.xml`, add CacheFilter declaration:
 
 ```
 <filter>
-    <filter-name>Parakeet</filter-name>
-    <filter-class>xyz.sheswayhot.resources.filters.CacheFilter</filter-class>
+    <filter-name>Dude</filter-name>
+    <filter-class>xyz.sheswayhot.resources.filters.DudeFilter</filter-class>
 </filter>
 
 <filter-mapping>
-    <filter-name>Parakeet</filter-name>
+    <filter-name>Dude</filter-name>
     <url-pattern>/*</url-pattern>
 </filter-mapping>
 ```
@@ -79,39 +79,37 @@ doesn't pick up the cookie on authentication. Add to the **web.xml**
 	</session-config>
 ```
 
-Finally wire it up either by:
-
-`Parakeet dude = new Parakeet(new JdcbAccessor());`
-
-or if spring project define your beans as such:
+Finally wire it up either by two ways either via Spring or 
+set the accessor...
 
 ```
-<bean id="jdbcAccessor" class="com.project.accessor.JdbcAccessor"/>
-
-<bean id="dude" class="xyz.sheswayhot.Dude" scope="singleton">
-    <constructor-arg name="accessor" ref="jdbcAccessor"/>
-</bean>
+<bean id="accessor" class="com.project.accessor.JdbcAccessor"/>
 ```
+
+Then somewhere in your startup routine set:
+
+```Dude.setAccessor(accessor)```
+
 
 ### Your project is configured. 
 
 Now you can use can authenticate your user via :
 
-`dude.login()`
+`Dude.login()`
 
 And you'll have access to the following methods:
 
-`dude.isAuthenticated()`
+`Dude.isAuthenticated()`
 
-`dude.hasRole(role)`
+`Dude.hasRole(role)`
 
-`dude.hasPermission(permission)`
+`Dude.hasPermission(permission)`
 
 To log out:
 
-`dude.logout()`
+`Dude.logout()`
 
-### See, we told you it was cute!
+### See, we told you it was simple!
 
 Oh, we added something new. Taglibs:
 
@@ -126,7 +124,7 @@ within jsp without scriptlets.
 
 Displays when user is anonymous & not authenticated
 
-`<dude:anonymous></isAuthenticated>`
+`<dude:anonymous></anonymous>`
 
 
 Displays content only when user is authenticated
@@ -136,10 +134,10 @@ Displays content only when user is authenticated
 
 Displays username
 
-`<dude:username></username>`
+`<dude:username/>`
 
 
 Sample web app can be viewed within the project under `src/sample-web`
 
-If you want a more, we recommend Apache Shiro! It's a Bull Dog.
+If you want a more, we recommend Apache Shiro! It's a Bull Dog Man.
 
