@@ -9,4 +9,6 @@
 *.DS_Store
 Notes.md
 output
-sample-web/output
+src/sample-web/*.iml
+src/sample-web/.idea
+src/sample-web/output
