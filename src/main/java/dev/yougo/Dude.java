@@ -109,8 +109,7 @@ public class Dude {
             HttpSession session = req.getSession(false);
 
             if (session != null &&
-                    sessions.containsKey(session.getId()) &&
-                        containsCookie(req)) {
+                    sessions.containsKey(session.getId())) {
                 return true;
             }
         }
