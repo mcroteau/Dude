@@ -67,13 +67,18 @@ public class Dude {
             HttpSession httpSession = req.getSession(true);
             httpSession.setAttribute(USER_KEY, username);
 
+
             sessions.put(httpSession.getId(), httpSession);
 
-            Cookie cookie = new Cookie(COOKIE, httpSession.getId());
-            cookie.setPath("/");
+            if(!Dude.cookieExists(req)) {
+                ServletContext context = req.getServletContext();
+                Cookie cookie = new Cookie(COOKIE, httpSession.getId());
+                cookie.setHttpOnly(true);
+                cookie.setPath(context.getContextPath());
 
-            HttpServletResponse resp = Storage.getResponse();
-            resp.addCookie(cookie);
+                HttpServletResponse resp = Storage.getResponse();
+                resp.addCookie(cookie);
+            }
             
             return true;
 
@@ -125,7 +130,7 @@ public class Dude {
     }
 
 
-    public static boolean containsCookie(HttpServletRequest req){
+    public static boolean cookieExists(HttpServletRequest req){
         Cookie[] cookies = req.getCookies();
         if(cookies != null) {
             for (Cookie cookie : cookies) {
@@ -184,10 +189,6 @@ public class Dude {
             e.printStackTrace();
         }
         return passwordHashed.toString();
-    }
-
-    public boolean isConfigured(){
-        return Dude.accessor != null ? true: false;
     }
 
 }
