@@ -1,4 +1,4 @@
-# Dude! is a small Open Source security plugin that allows for quick securing of J2ee applications.
+# Dude! is a small Open Source security plugin that is quick and easy to set up.
 
 ### Installation
 
