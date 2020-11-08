@@ -1,6 +1,6 @@
-package dev.yougo.tags;
+package xyz.sheswayhot.tags;
 
-import dev.yougo.Dude;
+import xyz.sheswayhot.Dude;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;

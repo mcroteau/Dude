@@ -1,4 +1,4 @@
-package dev.yougo.filters;
+package xyz.sheswayhot.filters;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;

@@ -16,21 +16,21 @@
 
     <tag>
         <name>isAnonymous</name>
-        <tag-class>dev.yougo.tags.AnonymousTag</tag-class>
+        <tag-class>xyz.sheswayhot.tags.AnonymousTag</tag-class>
         <body-content>JSP</body-content>
         <description></description>
     </tag>
 
     <tag>
         <name>isAuthenticated</name>
-        <tag-class>dev.yougo.tags.AuthenticatedTag</tag-class>
+        <tag-class>xyz.sheswayhot.tags.AuthenticatedTag</tag-class>
         <body-content>JSP</body-content>
         <description></description>
     </tag>
 
     <tag>
         <name>username</name>
-        <tag-class>dev.yougo.tags.UsernameTag</tag-class>
+        <tag-class>xyz.sheswayhot.tags.UsernameTag</tag-class>
         <body-content>empty</body-content>
         <description></description>
     </tag>

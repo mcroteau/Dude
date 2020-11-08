@@ -10,7 +10,7 @@ Add dependency:
 
 ```
 <dependency>
-    <groupId>dev.yougo</groupId>
+    <groupId>xyz.sheswayhot</groupId>
     <artifactId>dude</artifactId>
     <version>0.1</version>
 </dependency>
@@ -21,7 +21,7 @@ Update `web.xml`, add DudeFilter declaration:
 ```
 <filter>
     <filter-name>Dude</filter-name>
-    <filter-class>dev.yougo.filters.DudeFilter</filter-class>
+    <filter-class>xyz.sheswayhot.filters.DudeFilter</filter-class>
 </filter>
 
 <filter-mapping>
@@ -38,7 +38,7 @@ Spring Example:
 ```
 package xyz.ioc.accessor;
 
-import dev.yougo.access.Accessor;
+import xyz.sheswayhot.access.Accessor;
 import org.springframework.beans.factory.annotation.Autowired;
 import xyz.ioc.dao.AccountDao;
 import xyz.ioc.model.Account;

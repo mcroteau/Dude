@@ -1,4 +1,4 @@
-package dev.yougo.utils;
+package xyz.sheswayhot.utils;
 
 public class TestConstants {
 

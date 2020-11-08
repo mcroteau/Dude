@@ -6,7 +6,7 @@
 
     <servlet>
         <servlet-name>SigninServlet</servlet-name>
-        <servlet-class>dev.yougo.web.SigninServlet</servlet-class>
+        <servlet-class>xyz.sheswayhot.web.SigninServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -16,7 +16,7 @@
 
     <servlet>
         <servlet-name>SignoutServlet</servlet-name>
-        <servlet-class>dev.yougo.web.SignoutServlet</servlet-class>
+        <servlet-class>xyz.sheswayhot.web.SignoutServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -26,7 +26,7 @@
 
     <servlet>
         <servlet-name>AuthServlet</servlet-name>
-        <servlet-class>dev.yougo.web.AuthServlet</servlet-class>
+        <servlet-class>xyz.sheswayhot.web.AuthServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -37,7 +37,7 @@
 
     <servlet>
         <servlet-name>SecuredServlet</servlet-name>
-        <servlet-class>dev.yougo.web.SecuredServlet</servlet-class>
+        <servlet-class>xyz.sheswayhot.web.SecuredServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -47,7 +47,7 @@
 
     <filter>
         <filter-name>Dude</filter-name>
-        <filter-class>dev.yougo.filters.DudeFilter</filter-class>
+        <filter-class>xyz.sheswayhot.filters.DudeFilter</filter-class>
     </filter>
 
     <filter-mapping>

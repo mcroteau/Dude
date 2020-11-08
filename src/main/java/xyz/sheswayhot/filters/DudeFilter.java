@@ -1,7 +1,7 @@
-package dev.yougo.filters;
+package xyz.sheswayhot.filters;
 
-import dev.yougo.Dude;
-import dev.yougo.Storage;
+import xyz.sheswayhot.Dude;
+import xyz.sheswayhot.Storage;
 
 import javax.servlet.*;
 import javax.servlet.http.Cookie;

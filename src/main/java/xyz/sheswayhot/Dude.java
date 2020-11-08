@@ -1,6 +1,6 @@
-package dev.yougo;
+package xyz.sheswayhot;
 
-import dev.yougo.access.Accessor;
+import xyz.sheswayhot.access.Accessor;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.Cookie;

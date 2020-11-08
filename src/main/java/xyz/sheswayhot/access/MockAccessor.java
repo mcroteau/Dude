@@ -1,6 +1,6 @@
-package dev.yougo.access;
+package xyz.sheswayhot.access;
 
-import dev.yougo.Dude;
+import xyz.sheswayhot.Dude;
 
 import java.util.HashSet;
 import java.util.Set;
