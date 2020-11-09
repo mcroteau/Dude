@@ -25,17 +25,6 @@ public class DudeFilter implements Filter {
         Storage.storeResponse(resp);
 
         if(request != null && response != null) {
-            HttpSession httpSession = req.getSession(false);
-
-            if(httpSession != null &&
-                    !Dude.cookieExists(req)) {
-                ServletContext context = req.getServletContext();
-                Cookie cookie = new Cookie(Dude.COOKIE, httpSession.getId());
-                cookie.setHttpOnly(true);
-                cookie.setPath(context.getContextPath());
-                resp.addCookie(cookie);
-            }
-
             chain.doFilter(request, response);
         }
     }

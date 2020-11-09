@@ -67,18 +67,13 @@ public class Dude {
             HttpSession httpSession = req.getSession(true);
             httpSession.setAttribute(USER_KEY, username);
 
-
             sessions.put(httpSession.getId(), httpSession);
 
-            if(!Dude.cookieExists(req)) {
-                ServletContext context = req.getServletContext();
-                Cookie cookie = new Cookie(COOKIE, httpSession.getId());
-                cookie.setHttpOnly(true);
-                cookie.setPath(context.getContextPath());
+            Cookie cookie = new Cookie(COOKIE, httpSession.getId());
+            cookie.setPath("/");
 
-                HttpServletResponse resp = Storage.getResponse();
-                resp.addCookie(cookie);
-            }
+            HttpServletResponse resp = Storage.getResponse();
+            resp.addCookie(cookie);
             
             return true;
 
