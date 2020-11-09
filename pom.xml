@@ -3,7 +3,7 @@
 	<groupId>xyz.sheswayhot</groupId>
 	<artifactId>dude</artifactId>
 	<packaging>jar</packaging>
-	<version>0.2-SNAPSHOT</version>
+	<version>0.1-SNAPSHOT</version>
 
 	<name>Dude!</name>
 	<description>Dude is a small security J2ee plugin.</description>
