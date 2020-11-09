@@ -3,7 +3,7 @@
 	<groupId>xyz.sheswayhot</groupId>
 	<artifactId>dude</artifactId>
 	<packaging>jar</packaging>
-	<version>0.2-SNAPSHOT</version>
+	<version>0.1</version>
 
 	<name>Dude!</name>
 	<description>Dude is a small security J2ee plugin.</description>
@@ -201,7 +201,7 @@
 		<connection>scm:git:git://github.com/mcroteau/Dude.git</connection>
 		<developerConnection>scm:git:git@github.com:mcroteau/Dude.git</developerConnection>
 		<url>https://github.com/mcroteau/Dude</url>
-		<tag>HEAD</tag>
+		<tag>v0.1</tag>
 	</scm>
 
 	<distributionManagement>
